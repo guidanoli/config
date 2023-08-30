@@ -1,6 +1,13 @@
 -- Neovim configuration file
 -- =========================
 
+-- globals
+do
+    local g = vim.g
+
+    g.mapleader='\\'
+end
+
 -- options
 do
     local opt = vim.opt
