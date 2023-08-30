@@ -20,6 +20,22 @@ do
     opt.undofile = true
 end
 
+-- key mappings
+do
+    local nmap = function (lhs, rhs)
+        vim.keymap.set('n', lhs, rhs, {silent = true})
+    end
+
+    -- clear search highlight
+    nmap('<leader>n', ':noh<cr>')
+
+    -- go to next buffer
+    nmap('<leader>l', ':bn<cr>')
+
+    -- go to previous buffer
+    nmap('<leader>h', ':bp<cr>')
+end
+
 -- lazy setup
 do
     local lazypath = vim.fn.stdpath"data" .. "/lazy/lazy.nvim"
