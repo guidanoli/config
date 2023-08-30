@@ -6,6 +6,9 @@ do
     local g = vim.g
 
     g.mapleader='\\'
+
+    -- bkad/CamelCaseMotion
+    g.camelcasemotion_key = ';'
 end
 
 -- options

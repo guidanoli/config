@@ -1,4 +1,6 @@
 return {
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+    "bkad/CamelCaseMotion",
     "farmergreg/vim-lastplace",
+    "whonore/Coqtail",
+    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 }
