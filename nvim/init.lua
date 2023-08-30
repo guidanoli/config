@@ -55,7 +55,5 @@ do
 
     local lazy = require"lazy"
 
-    lazy.setup{
-        {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-    }
+    lazy.setup"plugins"
 end
