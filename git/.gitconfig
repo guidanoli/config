@@ -8,6 +8,7 @@
 	excludesFile = ~/.gitignore
 [alias]
 	smu = submodule update --init --recursive
+	adog = log --all --decorate --oneline --graph
 [merge]
 	tool = vimdiff
 [mergetool "vimdiff"]
