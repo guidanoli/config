@@ -60,3 +60,9 @@ do
 
     lazy.setup"plugins"
 end
+
+-- lsp
+do
+    local lspconfig = require"lspconfig"
+    lspconfig.tsserver.setup{}
+end
