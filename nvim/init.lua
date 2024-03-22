@@ -1,6 +1,9 @@
 -- Neovim configuration file
 -- =========================
 
+-- color scheme
+vim.cmd.colorscheme('torte')
+
 -- globals
 do
     local g = vim.g
