@@ -40,6 +40,12 @@ do
 
     -- go to previous buffer
     nmap('<leader>h', ':bp<cr>')
+
+    -- diagnostics
+    nmap('<space>e', vim.diagnostic.open_float)
+    nmap('[d', vim.diagnostic.goto_prev)
+    nmap(']d', vim.diagnostic.goto_next)
+    nmap('<space>q', vim.diagnostic.setloclist)
 end
 
 -- lazy setup
