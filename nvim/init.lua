@@ -22,7 +22,7 @@ do
     opt.shiftwidth = 4
     opt.softtabstop = 4
     opt.tabstop = 4
-    opt.undodir = vim.fn.stdpath"config" .. "/undo"
+    opt.undodir = vim.fn.stdpath"data" .. "/undo"
     opt.undofile = true
 end
 

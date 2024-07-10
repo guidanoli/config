@@ -9,11 +9,15 @@ install: install-neovim install-plugin-deps link-init link-plugins
 
 .PHONY: install-neovim
 install-neovim:
-	apt-get install -y neovim
+	apt-get satisfy \
+		"neovim (>= 0.8.0)"
 
 .PHONY: install-plugin-deps
 install-plugin-deps:
-	apt-get install -y coq
+	apt-get satisfy \
+		"coq (>= 8.4), \
+		git (>= 2.19.0), \
+		python3 (>= 3.6)"
 
 .PHONY: link-init
 link-init: ${CONFIG_DIR}/init.lua
