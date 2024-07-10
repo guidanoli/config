@@ -9,13 +9,14 @@ install: install-neovim install-plugin-deps link-init link-plugins
 
 .PHONY: install-neovim
 install-neovim:
-	apt-get satisfy \
+	apt-get satisfy -y --no-install-recommends \
 		"neovim (>= 0.8.0)"
 
 .PHONY: install-plugin-deps
 install-plugin-deps:
-	apt-get satisfy \
-		"coq (>= 8.4), \
+	apt-get satisfy -y --no-install-recommends \
+		"clangd, \
+		coq (>= 8.4), \
 		git (>= 2.19.0), \
 		python3 (>= 3.6)"
 
