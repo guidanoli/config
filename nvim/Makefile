@@ -14,4 +14,4 @@ ${CONFIG_DIR}/lua:
 	mkdir -p $@
 
 ${CONFIG_DIR}/lua/plugins.lua: ${CONFIG_DIR}/lua
-	ln -s "${CURRENT_DIR}/plugins.lua" $@
+	ln -s "${CURRENT_DIR}/lua/plugins.lua" $@
