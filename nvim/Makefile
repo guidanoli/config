@@ -15,10 +15,7 @@ install-neovim:
 .PHONY: install-plugin-deps
 install-plugin-deps:
 	apt-get satisfy -y --no-install-recommends \
-		"clangd, \
-		coq (>= 8.4), \
-		git (>= 2.19.0), \
-		python3 (>= 3.6)"
+		"git (>= 2.19.0)"
 
 .PHONY: link-init
 link-init: ${CONFIG_DIR}/init.lua
