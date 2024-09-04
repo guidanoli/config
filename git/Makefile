@@ -7,13 +7,13 @@ CURRENT_DIR=$(shell pwd)
 install: link-ignore link-config
 
 .PHONY: link-ignore
-link-init: ${HOME_DIR}/.gitignore
+link-ignore: ${HOME_DIR}/.gitignore
 
 ${HOME_DIR}/.gitignore: ${HOME_DIR}
 	ln -s "${CURRENT_DIR}/.gitignore" $@
 
 .PHONY: link-config
-link-init: ${HOME_DIR}/.gitconfig
+link-config: ${HOME_DIR}/.gitconfig
 
 ${HOME_DIR}/.gitconfig: ${HOME_DIR}
 	ln -s "${CURRENT_DIR}/.gitconfig" $@
