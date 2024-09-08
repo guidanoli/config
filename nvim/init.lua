@@ -74,7 +74,7 @@ end
 do
     local lspconfig = require"lspconfig"
     local util = require'lspconfig.util'
-    lspconfig.tsserver.setup{}
+    lspconfig.ts_ls.setup{}
     lspconfig.clangd.setup{}
     lspconfig.gopls.setup{
         root_dir = function(fname)
