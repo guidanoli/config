@@ -12,6 +12,7 @@
 [alias]
 	smu = submodule update --init --recursive
 	adog = log --all --decorate --oneline --graph
+	rbias = rebase -i --autosquash
 [merge]
 	tool = vimdiff
 [mergetool "vimdiff"]
