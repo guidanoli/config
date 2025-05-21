@@ -76,6 +76,7 @@ do
     local util = require'lspconfig.util'
     lspconfig.ts_ls.setup{}
     lspconfig.clangd.setup{}
+    lspconfig.rust_analyzer.setup{}
     lspconfig.gopls.setup{
         root_dir = function(fname)
             -- see: https://github.com/neovim/nvim-lspconfig/issues/804
