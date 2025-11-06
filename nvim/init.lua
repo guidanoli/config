@@ -91,6 +91,24 @@ do
             return util.root_pattern 'go.work'(fname) or util.root_pattern('go.mod', '.git')(fname)
         end,
     }
+    lspconfig.yamlls.setup {
+        settings = {
+            yaml = {
+                keyOrdering = false,
+                format = {
+                    enable = true,
+                },
+                validate = true,
+                schemaStore = {
+                    enable = true,
+                },
+                schemas = {
+                    ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+                    ["https://json.schemastore.org/github-action.json"] = "/action.yml",
+                },
+            },
+        },
+    }
 
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('UserLspConfig', {}),
