@@ -1,30 +1,17 @@
 # Links NeoVim configuration files
 
-SHARE_DIR=~/.local/share/nvim
-CONFIG_DIR=~/.config/nvim
+CONFIG_DIR=$(HOME)/.config/nvim
 CURRENT_DIR=$(shell pwd)
 
 .PHONY: install
-install: link-init link-plugins
+install: ${CONFIG_DIR}/init.lua
+install: ${CONFIG_DIR}/nvim-pack-lock.json
 
-.PHONY: link-init
-link-init: ${CONFIG_DIR}/init.lua
-
-${CONFIG_DIR}/init.lua: ${CONFIG_DIR}
+${CONFIG_DIR}/init.lua: | ${CONFIG_DIR}
 	ln -s "${CURRENT_DIR}/init.lua" $@
+
+${CONFIG_DIR}/nvim-pack-lock.json: | ${CONFIG_DIR}
+	ln -s "${CURRENT_DIR}/nvim-pack-lock.json" $@
 
 ${CONFIG_DIR}:
 	mkdir -p $@
-
-.PHONY: link-plugins
-link-plugins: ${CONFIG_DIR}/lua/plugins.lua
-
-${CONFIG_DIR}/lua/plugins.lua: ${CONFIG_DIR}/lua
-	ln -s "${CURRENT_DIR}/lua/plugins.lua" $@
-
-${CONFIG_DIR}/lua:
-	mkdir -p $@
-
-.PHONY: clean
-clean:
-	rm -rf ${SHARE_DIR} ${CONFIG_DIR}

@@ -1,0 +1,20 @@
+{
+  "plugins": {
+    "CamelCaseMotion": {
+      "rev": "e69b0024f8f63db10c5d0df26d4920760755d454",
+      "src": "https://github.com/bkad/CamelCaseMotion.git"
+    },
+    "Coqtail": {
+      "rev": "157e738fcddda66ef7ed0cf46ee5a27ed664d1c9",
+      "src": "https://github.com/whonore/Coqtail.git"
+    },
+    "nvim-lspconfig": {
+      "rev": "8e2084bf5e40c79c1f42210a6ef96a0a4793a763",
+      "src": "https://github.com/neovim/nvim-lspconfig.git"
+    },
+    "vim-lastplace": {
+      "rev": "e58cb0df716d3c88605ae49db5c4741db8b48aa9",
+      "src": "https://github.com/farmergreg/vim-lastplace.git"
+    }
+  }
+}
