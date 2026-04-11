@@ -15,7 +15,7 @@ vim.cmd.colorscheme "torte"
  -- CamelCase motion key binding, used by
  -- https://github.com/bkad/CamelCaseMotion
  vim.g.camelcasemotion_key = ";"
- 
+
 -- Options
 -- -------
 
