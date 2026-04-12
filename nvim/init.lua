@@ -52,13 +52,22 @@ vim.pack.add{
     "https://github.com/bkad/CamelCaseMotion",
 
     -- Opens files in the last place of edit
-    "https://github.com/farmergreg/vim-lastplace",
+    {
+        src = "https://github.com/farmergreg/vim-lastplace",
+        version = vim.version.range "^4.5.0",
+    },
 
     -- Sensible LSP configuration defaults
-    "https://github.com/neovim/nvim-lspconfig",
+    {
+        src = "https://github.com/neovim/nvim-lspconfig",
+        version = vim.version.range "^2.8.0",
+    },
 
     -- Interactive Coq (now-called Rocq) proofs
-    "https://github.com/whonore/Coqtail",
+    {
+        src = "https://github.com/whonore/Coqtail",
+        version = vim.version.range "^1.9.0",
+    },
 }
 
 -- Language server providers
