@@ -19,3 +19,5 @@
     path = nvim
 [init]
 	defaultBranch = main
+[credential "https://github.com"]
+	username = guidanoli
